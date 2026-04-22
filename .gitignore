@@ -1,0 +1,54 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ambiente (NUNCA subir isso)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos temporários
+tmp/
+temp/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Coverage (testes)
+coverage/
+
+# Arquivos do Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+
+# Docker (caso você use depois)
+docker-compose.override.yml
+
+# Outros
+*.local

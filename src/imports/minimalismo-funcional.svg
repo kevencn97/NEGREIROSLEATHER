@@ -1,0 +1,90 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="180" y1="120" x2="990" y2="1380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18120D"/>
+      <stop offset="0.52" stop-color="#0E0B08"/>
+      <stop offset="1" stop-color="#070605"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(630 480) rotate(90) scale(560 520)">
+      <stop stop-color="#B57A44" stop-opacity="0.28"/>
+      <stop offset="0.45" stop-color="#6B4322" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0A0806" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="walletBody" x1="248" y1="234" x2="883" y2="1183" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F311C"/>
+      <stop offset="0.34" stop-color="#25170E"/>
+      <stop offset="0.72" stop-color="#130D09"/>
+      <stop offset="1" stop-color="#090705"/>
+    </linearGradient>
+    <linearGradient id="walletEdge" x1="294" y1="278" x2="841" y2="1090" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C79261"/>
+      <stop offset="0.4" stop-color="#84502B"/>
+      <stop offset="1" stop-color="#23160D"/>
+    </linearGradient>
+    <linearGradient id="cardTop" x1="707" y1="179" x2="909" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6D7C8"/>
+      <stop offset="1" stop-color="#8F6843"/>
+    </linearGradient>
+    <linearGradient id="cardMid" x1="660" y1="262" x2="878" y2="516" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BE8A57"/>
+      <stop offset="1" stop-color="#5A361D"/>
+    </linearGradient>
+    <linearGradient id="cardLow" x1="615" y1="345" x2="832" y2="585" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E8E0"/>
+      <stop offset="1" stop-color="#7A5432"/>
+    </linearGradient>
+    <linearGradient id="shadowFade" x1="600" y1="1090" x2="600" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090705" stop-opacity="0"/>
+      <stop offset="1" stop-color="#090705" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="softShadow" x="150" y="180" width="904" height="1124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="36"/>
+      <feGaussianBlur stdDeviation="42"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.02 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0.55 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="blurAccent" x="111" y="43" width="978" height="965" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+
+  <g filter="url(#blurAccent)" opacity="0.62">
+    <path d="M314 272C420 198 564 186 676 224C810 270 883 384 914 516C941 628 917 758 829 841C725 938 573 971 445 919C321 868 236 763 224 627C211 492 223 336 314 272Z" fill="#A36B3E"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <g transform="translate(220 188) rotate(-12 360 470)">
+      <rect x="76" y="84" width="568" height="912" rx="54" fill="#050403" opacity="0.78"/>
+      <rect x="96" y="52" width="568" height="912" rx="54" fill="url(#walletBody)"/>
+      <rect x="96" y="52" width="568" height="912" rx="54" stroke="url(#walletEdge)" stroke-width="3"/>
+
+      <path d="M142 246H617" stroke="#EADBC7" stroke-opacity="0.22" stroke-width="2"/>
+      <path d="M142 370H617" stroke="#EADBC7" stroke-opacity="0.18" stroke-width="2"/>
+      <path d="M142 494H617" stroke="#EADBC7" stroke-opacity="0.14" stroke-width="2"/>
+
+      <rect x="158" y="136" width="332" height="96" rx="28" fill="#150F0B" fill-opacity="0.82"/>
+      <rect x="158" y="260" width="332" height="96" rx="28" fill="#150F0B" fill-opacity="0.78"/>
+      <rect x="158" y="384" width="332" height="96" rx="28" fill="#150F0B" fill-opacity="0.74"/>
+
+      <rect x="520" y="116" width="132" height="284" rx="24" fill="url(#cardTop)"/>
+      <rect x="483" y="206" width="132" height="284" rx="24" fill="url(#cardMid)"/>
+      <rect x="448" y="296" width="132" height="284" rx="24" fill="url(#cardLow)"/>
+
+      <path d="M145 672C205 626 304 613 410 622C513 631 589 669 617 721V953H145V672Z" fill="#0C0907" fill-opacity="0.7"/>
+      <path d="M145 672C205 626 304 613 410 622C513 631 589 669 617 721" stroke="#C68E5E" stroke-opacity="0.26" stroke-width="3"/>
+
+      <path d="M131 91C234 79 336 78 449 85C544 91 617 104 676 128" stroke="#F2E8DB" stroke-opacity="0.16" stroke-width="3"/>
+      <path d="M120 935C220 954 363 964 498 955C578 949 639 937 688 915" stroke="#F2E8DB" stroke-opacity="0.12" stroke-width="3"/>
+    </g>
+  </g>
+
+  <rect y="1070" width="1200" height="430" fill="url(#shadowFade)"/>
+</svg>
