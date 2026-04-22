@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-const GOOGLE_APPS_SCRIPT_URL = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL;
-
 async function enviarFormulario({
   nome,
   email,
@@ -19,20 +17,24 @@ async function enviarFormulario({
     website: '',
   };
 
-  await fetch(GOOGLE_APPS_SCRIPT_URL, {
+  const response = await fetch('/api/lead', {
     method: 'POST',
-    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(dados),
   });
+
+  if (!response.ok) {
+    throw new Error('Falha ao enviar cadastro');
+  }
 }
 
 export function LeadPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [form, setForm] = useState({ nome: '', email: '', telefone: '' });
   const [errors, setErrors] = useState({ nome: false, email: false, telefone: false });
   const [visible, setVisible] = useState(false);
@@ -76,6 +78,7 @@ export function LeadPopup() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     setErrors((prev) => ({ ...prev, [e.target.name]: false }));
+    setSubmitError('');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -87,13 +90,23 @@ export function LeadPopup() {
       email: !form.email.trim() || !form.email.includes('@'),
       telefone: !form.telefone.trim(),
     };
+
     setErrors(newErrors);
+
     if (Object.values(newErrors).some(Boolean)) return;
 
     setIsSubmitting(true);
-    await enviarFormulario(form);
-    setSubmitted(true);
-    localStorage.setItem('kn_popup_dismissed', '1');
+    setSubmitError('');
+
+    try {
+      await enviarFormulario(form);
+      setSubmitted(true);
+      localStorage.setItem('kn_popup_dismissed', '1');
+    } catch {
+      setSubmitError('Nao foi possivel enviar agora. Tente novamente em instantes.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -105,19 +118,19 @@ export function LeadPopup() {
     >
       <div className={`kn-popup${visible ? ' kn-popup--visible' : ''}`}>
         <button className="kn-popup__close" onClick={handleClose} aria-label="Fechar">
-          ×
+          &times;
         </button>
 
         {!submitted ? (
           <>
-            <p className="kn-popup__eyebrow">NEGREIROS — PRÉ-LANÇAMENTO</p>
+            <p className="kn-popup__eyebrow">NEGREIROS &#8212; PR&Eacute;-LANCAMENTO</p>
             <h2 className="kn-popup__title">
               Seja o
               <br />
               <em>primeiro.</em>
             </h2>
             <p className="kn-popup__sub">
-              Cadastre-se e receba acesso antecipado quando as carteiras estiverem disponíveis.
+              Cadastre-se e receba acesso antecipado quando as carteiras estiverem dispon&iacute;veis.
             </p>
 
             <form className="kn-popup__form" onSubmit={handleSubmit} noValidate>
@@ -133,7 +146,7 @@ export function LeadPopup() {
                   autoComplete="name"
                   disabled={isSubmitting}
                 />
-                {errors.nome && <span className="kn-popup__error-msg">Campo obrigatório</span>}
+                {errors.nome && <span className="kn-popup__error-msg">Campo obrigat&oacute;rio</span>}
               </div>
 
               <div className={`kn-popup__field${errors.email ? ' kn-popup__field--error' : ''}`}>
@@ -148,7 +161,7 @@ export function LeadPopup() {
                   autoComplete="email"
                   disabled={isSubmitting}
                 />
-                {errors.email && <span className="kn-popup__error-msg">E-mail inválido</span>}
+                {errors.email && <span className="kn-popup__error-msg">E-mail inv&aacute;lido</span>}
               </div>
 
               <div className={`kn-popup__field${errors.telefone ? ' kn-popup__field--error' : ''}`}>
@@ -163,26 +176,31 @@ export function LeadPopup() {
                   autoComplete="tel"
                   disabled={isSubmitting}
                 />
-                {errors.telefone && <span className="kn-popup__error-msg">Campo obrigatório</span>}
+                {errors.telefone && <span className="kn-popup__error-msg">Campo obrigat&oacute;rio</span>}
               </div>
 
               <button type="submit" className="kn-popup__submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Enviando...' : 'Entrar na lista'}
               </button>
+
+              {submitError && <span className="kn-popup__error-msg">{submitError}</span>}
             </form>
 
-            <p className="kn-popup__disclaimer">Seus dados são tratados com discrição. Sem spam.</p>
+            <p className="kn-popup__disclaimer">
+              Seus dados s&atilde;o tratados com discri&ccedil;&atilde;o. Sem spam.
+            </p>
           </>
         ) : (
           <div className="kn-popup__success">
-            <div className="kn-popup__success-icon">✦</div>
+            <div className="kn-popup__success-icon">&#10022;</div>
             <h2 className="kn-popup__title">
               Cadastro
               <br />
               <em>confirmado.</em>
             </h2>
             <p className="kn-popup__sub">
-              Você será avisado assim que a coleção estiver disponível. Obrigado pela confiança.
+              Voc&ecirc; ser&aacute; avisado assim que a cole&ccedil;&atilde;o estiver dispon&iacute;vel.
+              Obrigado pela confian&ccedil;a.
             </p>
             <button className="kn-popup__close-btn" onClick={handleClose}>
               Fechar
