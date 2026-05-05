@@ -34,28 +34,28 @@ export function Positioning() {
         {/* Phrase 1 */}
         <div ref={refs[0]} className="kn-pos-phrase kn-reveal">
           <h2 className="kn-pos-text">
-            O couro <em>responde</em><br />
-            ao tempo.
+            O couro muda.<br />
+            <em>A peça acompanha.</em>
           </h2>
-          <span className="kn-pos-meta">Durabilidade</span>
+          <span className="kn-pos-meta">Tempo</span>
         </div>
 
         {/* Phrase 2 */}
         <div ref={refs[1]} className="kn-pos-phrase kn-reveal">
           <h2 className="kn-pos-text">
-            Solidez que<br />
-            você <em>sente.</em>
+            Firmeza aparece<br />
+            na mão <em>e no bolso.</em>
           </h2>
-          <span className="kn-pos-meta">Qualidade</span>
+          <span className="kn-pos-meta">Corpo</span>
         </div>
 
         {/* Phrase 3 */}
         <div ref={refs[2]} className="kn-pos-phrase kn-reveal">
           <h2 className="kn-pos-text">
-            Feito para quem<br />
-            <em>decide.</em>
+            Quem corta com calma<br />
+            <em>escolhe melhor.</em>
           </h2>
-          <span className="kn-pos-meta">Posicionamento</span>
+          <span className="kn-pos-meta">Ofício</span>
         </div>
 
       </div>

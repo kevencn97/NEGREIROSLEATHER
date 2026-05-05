@@ -24,16 +24,16 @@ export function Hero() {
     <section className={`kn-hero${loaded ? ' kn-hero--loaded' : ''}`}>
       {/* Left — Content */}
       <div className="kn-hero__content">
-        <span className="kn-hero__label">Carteiras de Couro Legítimo</span>
+        <span className="kn-hero__label">Carteiras de couro feitas à mão</span>
 
         <h1 className="kn-hero__title">
-          Feita<br />
-          para <em>durar.</em>
+          Cada peça começa<br />
+          na <em>bancada.</em>
         </h1>
 
         <p className="kn-hero__subtitle">
-          Couro legítimo. Sem excessos.<br />
-          Precisão em cada detalhe.
+          O desenho vem primeiro.<br />
+          Depois entram mão, medida e tempo.
         </p>
 
         <div className="kn-hero__actions">
@@ -41,14 +41,14 @@ export function Hero() {
             className="kn-btn kn-btn--solid"
             onClick={openPopup}
           >
-            Entrar na lista
+            Acompanhar o trabalho
           </button>
           <a
             href="#processo"
             className="kn-btn kn-btn--outline"
             onClick={(e) => { e.preventDefault(); scrollTo('processo'); }}
           >
-            Como é feita
+            Ver o processo
           </a>
         </div>
       </div>
@@ -58,7 +58,7 @@ export function Hero() {
         <div className="kn-hero__overlay" />
         <ImageWithFallback
           src={HERO_IMAGE}
-          alt="Carteira NEGREIROS"
+          alt="Carteira de couro sobre fundo escuro"
           className="kn-hero__image"
         />
       </div>
@@ -66,7 +66,7 @@ export function Hero() {
       {/* Scroll hint */}
       <div className="kn-hero__scroll-hint">
         <div className="kn-hero__scroll-line" />
-        <span className="kn-hero__scroll-text">Scroll</span>
+        <span className="kn-hero__scroll-text">Desça</span>
       </div>
     </section>
   );

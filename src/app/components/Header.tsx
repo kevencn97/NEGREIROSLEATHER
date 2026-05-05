@@ -32,7 +32,7 @@ export function Header() {
                 scrollTo('pilares');
               }}
             >
-              Os Pilares
+              Princípios
             </a>
           </li>
           <li>
@@ -43,7 +43,7 @@ export function Header() {
                 scrollTo('processo');
               }}
             >
-              Processo
+              Bancada
             </a>
           </li>
           <li>
@@ -54,7 +54,7 @@ export function Header() {
                 scrollTo('editorial');
               }}
             >
-              Editorial
+              Ofício
             </a>
           </li>
           <li>
@@ -65,14 +65,14 @@ export function Header() {
                 scrollTo('contato');
               }}
             >
-              Contato
+              Presença
             </a>
           </li>
         </ul>
       </nav>
 
       <button className="kn-btn kn-btn--ghost" onClick={openPopup}>
-        Lista de lançamento
+        Acompanhar o trabalho
       </button>
     </header>
   );

@@ -103,7 +103,7 @@ export function LeadPopup() {
       setSubmitted(true);
       localStorage.setItem('kn_popup_dismissed', '1');
     } catch {
-      setSubmitError('Nao foi possivel enviar agora. Tente novamente em instantes.');
+      setSubmitError('Não deu para enviar agora. Tente de novo em instantes.');
     } finally {
       setIsSubmitting(false);
     }
@@ -117,20 +117,20 @@ export function LeadPopup() {
       onClick={handleOverlayClick}
     >
       <div className={`kn-popup${visible ? ' kn-popup--visible' : ''}`}>
-        <button className="kn-popup__close" onClick={handleClose} aria-label="Fechar">
+        <button className="kn-popup__close" onClick={handleClose} aria-label="Fechar janela">
           &times;
         </button>
 
         {!submitted ? (
           <>
-            <p className="kn-popup__eyebrow">NEGREIROS &#8212; PR&Eacute;-LANCAMENTO</p>
+            <p className="kn-popup__eyebrow">NEGREIROS</p>
             <h2 className="kn-popup__title">
-              Seja o
+              Fique por
               <br />
-              <em>primeiro.</em>
+              <em>perto.</em>
             </h2>
             <p className="kn-popup__sub">
-              Cadastre-se e receba acesso antecipado quando as carteiras estiverem dispon&iacute;veis.
+              Deixe seu nome e eu aviso quando houver coisa nova na bancada.
             </p>
 
             <form className="kn-popup__form" onSubmit={handleSubmit} noValidate>
@@ -142,11 +142,11 @@ export function LeadPopup() {
                   name="nome"
                   value={form.nome}
                   onChange={handleChange}
-                  placeholder="Seu nome completo"
+                  placeholder="Seu nome"
                   autoComplete="name"
                   disabled={isSubmitting}
                 />
-                {errors.nome && <span className="kn-popup__error-msg">Campo obrigat&oacute;rio</span>}
+                {errors.nome && <span className="kn-popup__error-msg">Preciso desse campo</span>}
               </div>
 
               <div className={`kn-popup__field${errors.email ? ' kn-popup__field--error' : ''}`}>
@@ -157,11 +157,11 @@ export function LeadPopup() {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="seu@email.com"
+                  placeholder="voce@exemplo.com"
                   autoComplete="email"
                   disabled={isSubmitting}
                 />
-                {errors.email && <span className="kn-popup__error-msg">E-mail inv&aacute;lido</span>}
+                {errors.email && <span className="kn-popup__error-msg">E-mail inválido</span>}
               </div>
 
               <div className={`kn-popup__field${errors.telefone ? ' kn-popup__field--error' : ''}`}>
@@ -176,31 +176,30 @@ export function LeadPopup() {
                   autoComplete="tel"
                   disabled={isSubmitting}
                 />
-                {errors.telefone && <span className="kn-popup__error-msg">Campo obrigat&oacute;rio</span>}
+                {errors.telefone && <span className="kn-popup__error-msg">Preciso desse campo</span>}
               </div>
 
               <button type="submit" className="kn-popup__submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Enviando...' : 'Entrar na lista'}
+                {isSubmitting ? 'Enviando...' : 'Quero acompanhar'}
               </button>
 
               {submitError && <span className="kn-popup__error-msg">{submitError}</span>}
             </form>
 
             <p className="kn-popup__disclaimer">
-              Seus dados s&atilde;o tratados com discri&ccedil;&atilde;o. Sem spam.
+              Escrevo pouco. Só quando houver assunto.
             </p>
           </>
         ) : (
           <div className="kn-popup__success">
             <div className="kn-popup__success-icon">&#10022;</div>
             <h2 className="kn-popup__title">
-              Cadastro
+              Nome
               <br />
-              <em>confirmado.</em>
+              <em>anotado.</em>
             </h2>
             <p className="kn-popup__sub">
-              Voc&ecirc; ser&aacute; avisado assim que a cole&ccedil;&atilde;o estiver dispon&iacute;vel.
-              Obrigado pela confian&ccedil;a.
+              Quando eu tiver algo novo para mostrar, você vai saber.
             </p>
             <button className="kn-popup__close-btn" onClick={handleClose}>
               Fechar

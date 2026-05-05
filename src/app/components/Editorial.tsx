@@ -23,7 +23,7 @@ export function Editorial() {
         <div className="kn-editorial__panel">
           <ImageWithFallback
             src={TEXTURE_IMG}
-            alt="Textura do couro NEGREIROS"
+            alt="Superfície de couro com costura aparente"
             className="kn-editorial__image"
           />
         </div>
@@ -32,23 +32,23 @@ export function Editorial() {
           ref={textRef}
           className="kn-editorial__text-panel kn-reveal kn-reveal--right"
         >
-          <p className="kn-editorial__caption">Editorial</p>
+          <p className="kn-editorial__caption">Ofício</p>
 
           <h2 className="kn-editorial__title">
-            Textura que<br />
-            você <em>reconhece.</em>
+            Textura não se explica.<br />
+            A mão <em>reconhece.</em>
           </h2>
 
           <p className="kn-editorial__body">
-            Matéria-prima escolhida com critério.<br />
-            Textura, presença e resistência.<br />
-            Definida para a proposta de cada peça.
+            Nem toda pele aceita corte fino.<br />
+            Nem toda borda segura o uso.<br />
+            É olhando de perto que a peça começa.
           </p>
 
           <div className="kn-editorial__divider" />
 
           <p className="kn-editorial__detail">
-            Costura sela duplo. Padrão artesanal europeu.
+            Linha passada à mão. Borda fechada uma a uma.
           </p>
         </div>
       </div>
@@ -58,35 +58,35 @@ export function Editorial() {
         <div className="kn-craft__panel">
           <ImageWithFallback
             src={WORKBENCH_IMG}
-            alt="Ferramentas de bancada"
+            alt="Ferramentas sobre bancada de trabalho"
             className="kn-craft__image"
           />
-          <span className="kn-craft__caption">Bancada</span>
+          <span className="kn-craft__caption">Mesa</span>
         </div>
         <div className="kn-craft__panel">
           <ImageWithFallback
             src={STITCHING_IMG}
-            alt="Costura artesanal"
+            alt="Mão costurando couro"
             className="kn-craft__image"
           />
-          <span className="kn-craft__caption">Costura</span>
+          <span className="kn-craft__caption">Ponto</span>
         </div>
         <div className="kn-craft__panel">
           <ImageWithFallback
             src={FINISHING_IMG}
-            alt="Acabamento do couro"
+            alt="Borda de couro em acabamento"
             className="kn-craft__image"
           />
-          <span className="kn-craft__caption">Acabamento</span>
+          <span className="kn-craft__caption">Borda</span>
         </div>
         <div className="kn-craft__panel">
           <ImageWithFallback
             src={TEXTURE_IMG}
-            alt="Detalhe do couro"
+            alt="Detalhe da textura do couro"
             className="kn-craft__image"
             style={{ objectPosition: '20% center' }}
           />
-          <span className="kn-craft__caption">Detalhe</span>
+          <span className="kn-craft__caption">Pele</span>
         </div>
       </div>
     </div>

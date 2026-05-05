@@ -2,28 +2,28 @@ import { useScrollReveal } from './useScrollReveal';
 
 const advantages = [
   {
-    title: 'Couro legítimo',
-    desc: 'Selecionado por textura, espessura e resistência.',
+    title: 'Couro bem escolhido',
+    desc: 'Antes do corte, a mão já sabe o que vale seguir.',
   },
   {
-    title: 'Sem excessos',
-    desc: 'Cada detalhe existe por uma razão.',
+    title: 'Só o necessário',
+    desc: 'Se não ajuda no uso, fica fora da peça.',
   },
   {
-    title: 'Estrutura firme',
-    desc: 'Mantém a forma. Resiste ao uso diário.',
+    title: 'Forma que se sustenta',
+    desc: 'O corpo precisa ficar firme sem pesar no conjunto.',
   },
   {
-    title: 'Uso rápido',
-    desc: 'Acesso direto. Sem dobras desnecessárias.',
+    title: 'Abertura limpa',
+    desc: 'Cartão e nota saem sem disputa nem dobra.',
   },
   {
-    title: 'Acabamento preciso',
-    desc: 'Costura reforçada. Borda selada a fio.',
+    title: 'Beira bem feita',
+    desc: 'Costura assentada. Borda trabalhada até fechar direito.',
   },
   {
-    title: 'Menos volume',
-    desc: 'Espessura calculada. Bolso limpo.',
+    title: 'Volume contado',
+    desc: 'A espessura é pensada para o bolso seguir leve.',
   },
 ];
 
@@ -41,16 +41,16 @@ export function Advantages() {
         >
           <div>
             <p className="kn-label" style={{ marginBottom: '24px' }}>
-              Por que NEGREIROS
+              O bolso não perdoa excesso
             </p>
             <h2 className="kn-adv-title">
-              Menos volume.<br />
-              <em>Mais eficiência.</em>
+              Faço carteira para uso diário,<br />
+              <em>não para vitrine.</em>
             </h2>
           </div>
           <p className="kn-adv-desc">
-            Cada carteira é construída com o propósito de desaparecer no bolso
-            e aparecer quando importa. Couro que responde ao tempo.
+            A peça precisa entrar e sair da rotina sem chamar atenção. É aí que
+            eu acerto a mão.
           </p>
         </div>
 

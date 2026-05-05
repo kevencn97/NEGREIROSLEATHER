@@ -18,20 +18,21 @@ export function CTAFinal() {
         className="kn-reveal"
         style={{ position: 'relative', zIndex: 1 }}
       >
-        <p className="kn-cta__label">NEGREIROS. Em breve</p>
+        <p className="kn-cta__label">NEGREIROS</p>
 
         <h2 className="kn-cta__title">
-          Estamos<br />
-          <em>chegando.</em>
+          O ofício fica na peça.<br />
+          <em>Não no discurso.</em>
         </h2>
 
         <p className="kn-cta__subtitle">
-          Cadastre-se e seja o primeiro a saber quando a coleção for lançada.
+          Se quiser acompanhar de perto, eu aviso quando houver novos
+          registros do trabalho por aqui.
         </p>
 
         <div className="kn-cta__actions">
           <button className="kn-btn kn-btn--solid" onClick={openPopup}>
-            Entrar na lista
+            Acompanhar o trabalho
           </button>
           <a
             href="#editorial"
@@ -41,7 +42,7 @@ export function CTAFinal() {
               scrollTo('editorial');
             }}
           >
-            Conhecer a marca
+            Ver o ofício
           </a>
         </div>
       </div>

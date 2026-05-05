@@ -16,43 +16,43 @@ type Pillar = {
 const pillars: Pillar[] = [
   {
     id: "materia",
-    title: "Matéria Prima",
-    desc: "O couro é o começo de tudo. Selecionado à mão por textura, espessura e resistência. Antes de qualquer corte.",
+    title: "Escolha do couro",
+    desc: "Antes do molde, a mão procura fibra, corpo e toque.",
     image:
       "https://images.unsplash.com/photo-1763674292700-317879c2038c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwbGVhdGhlciUyMHRleHR1cmUlMjBtYWNybyUyMGRhcmt8ZW58MXx8fHwxNzc2ODc0NjExfDA&ixlib=rb-4.1.0&q=80&w=800",
   },
   {
     id: "costura",
-    title: "Costura dupla",
-    desc: "Linha reforçada por dentro e por fora. Resistência que não aparece, mas dura.",
+    title: "Costura por dentro",
+    desc: "A firmeza da peça começa no que quase não se vê.",
     image:
       "https://images.unsplash.com/photo-1696628045025-ce19418d9475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWF0aGVyJTIwY3JhZnRzbWFuJTIwaGFuZHMlMjBzdGl0Y2hpbmclMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NzY4NzQ2MTF8MA&ixlib=rb-4.1.0&q=80&w=800",
   },
   {
     id: "estrutura",
-    title: "Estrutura firme",
-    desc: "Mantém a forma ao longo dos anos. Sem deformações, sem volume desnecessário.",
+    title: "Corpo firme",
+    desc: "A construção segura a forma sem engrossar o conjunto.",
     image:
       "https://images.unsplash.com/photo-1772651983030-565c2b7be181?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwYnJvd24lMjBsZWF0aGVyJTIwbWF0ZXJpYWwlMjBsdXh1cnklMjBxdWFsaXR5fGVufDF8fHx8MTc3Njg3NDYxMXww&ixlib=rb-4.1.0&q=80&w=800",
   },
   {
     id: "borda",
-    title: "Borda selada",
-    desc: "Acabamento a fio quente. O detalhe que separa o artesanal do industrial.",
+    title: "Borda fechada",
+    desc: "A beira é tratada até ficar limpa ao toque e ao olho.",
     image:
       "https://images.unsplash.com/photo-1759523069474-3c45494a6679?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWF0aGVyJTIwZWRnZSUyMGJ1cm5pc2hpbmclMjBkZXRhaWwlMjBjbG9zZSUyMHVwJTIwYXJ0aXNhbnxlbnwxfHx8fDE3NzY4NzQ2MTR8MA&ixlib=rb-4.1.0&q=80&w=800",
   },
   {
     id: "minimalismo",
-    title: "Minimalismo funcional",
-    desc: "Cada elemento existe por uma razão. Sem ornamento. Sem excesso. Só o que é necessário.",
+    title: "Desenho enxuto",
+    desc: "O excesso sai no papel antes de sair na faca.",
     image: "https://images.unsplash.com/photo-1620109433606-a7dfa6107d28?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageStyle: { objectPosition: "78% center" },
   },
   {
     id: "processo",
-    title: "Processo rigoroso",
-    desc: "Cada peça passa por etapas manuais de controle. Não há atalho para o padrão que buscamos.",
+    title: "Ritmo de oficina",
+    desc: "Cada etapa fica no tempo certo. A pressa não entra.",
     image:
       "https://images.unsplash.com/photo-1647502210988-19681f03a7a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWF0aGVyJTIwd29ya3Nob3AlMjB0b29scyUyMGN1dHRpbmclMjBrbmlmZSUyMHRhYmxlfGVufDF8fHx8MTc3Njg3NDYxN3ww&ixlib=rb-4.1.0&q=80&w=800",
   },
@@ -84,18 +84,17 @@ export function Collection() {
               className="kn-label"
               style={{ marginBottom: "24px" }}
             >
-              O que estamos construindo
+              Antes de qualquer peça
             </p>
             <h2 className="kn-collection-title">
-              Seis pilares.
+              O trabalho se apoia
               <br />
-              <em>Um padrão.</em>
+              <em>nesses seis pontos.</em>
             </h2>
           </div>
           <div>
             <p className="kn-collection-sub">
-              Ainda em desenvolvimento, cada detalhe já está
-              definido. Estes são os compromissos que regem cada
+              O jeito de fazer está definido. Esses seis pontos sustentam cada
               peça NEGREIROS.
             </p>
             <button
@@ -103,7 +102,7 @@ export function Collection() {
               style={{ marginTop: "32px" }}
               onClick={openPopup}
             >
-              Entrar na lista de lançamento
+              Acompanhar o trabalho
             </button>
           </div>
         </div>

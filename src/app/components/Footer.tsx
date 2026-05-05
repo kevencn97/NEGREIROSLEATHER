@@ -15,21 +15,21 @@ export function Footer() {
           <div>
             <span className="kn-footer__wordmark">NEGREIROS</span>
             <p className="kn-footer__tagline">
-              Carteiras masculinas de couro legítimo.<br />
-              Em desenvolvimento. Lançamento em breve.
+              Carteiras feitas com medida e mão firme.<br />
+              Cada detalhe precisa se sustentar no uso.
             </p>
             <button
               className="kn-btn kn-btn--ghost"
               style={{ marginTop: '28px', fontSize: '0.68rem' }}
               onClick={openPopup}
             >
-              Entrar na lista
+              Acompanhar o trabalho
             </button>
           </div>
 
           {/* Navigation */}
           <div>
-            <p className="kn-footer__heading">Navegação</p>
+            <p className="kn-footer__heading">Percurso</p>
             <ul className="kn-footer__nav">
               <li>
                 <a
@@ -39,7 +39,7 @@ export function Footer() {
                     scrollTo('pilares');
                   }}
                 >
-                  Os Pilares
+                  Princípios
                 </a>
               </li>
               <li>
@@ -50,7 +50,7 @@ export function Footer() {
                     scrollTo('processo');
                   }}
                 >
-                  Processo
+                  Bancada
                 </a>
               </li>
               <li>
@@ -61,7 +61,7 @@ export function Footer() {
                     scrollTo('editorial');
                   }}
                 >
-                  Editorial
+                  Ofício
                 </a>
               </li>
               <li>
@@ -72,7 +72,7 @@ export function Footer() {
                     scrollTo('contato');
                   }}
                 >
-                  Contato
+                  Presença
                 </a>
               </li>
             </ul>
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="kn-footer__heading">Contato</p>
+            <p className="kn-footer__heading">Presença</p>
             <p className="kn-footer__contact-item">
               <a href="mailto:contato@kevennegreiros.com.br">
                 contato@kevennegreiros.com.br
@@ -99,7 +99,7 @@ export function Footer() {
               className="kn-footer__contact-item"
               style={{ marginTop: '28px' }}
             >
-              Brasil. Entrega nacional
+              Feito no Brasil.
             </p>
           </div>
         </div>

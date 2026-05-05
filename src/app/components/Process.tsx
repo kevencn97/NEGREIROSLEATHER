@@ -3,33 +3,33 @@ import { useScrollReveal } from './useScrollReveal';
 const steps = [
   {
     num: '01',
-    title: 'Seleção',
-    desc: 'Couro escolhido a mão. Textura, espessura, procedência.',
+    title: 'Escolha',
+    desc: 'Antes do corte, o couro passa pelo olho e pela mão.',
   },
   {
     num: '02',
     title: 'Corte',
-    desc: 'Molde preciso. Sem margem de erro.',
+    desc: 'O molde entra na medida. Desvio pequeno vira defeito grande.',
   },
   {
     num: '03',
     title: 'Marcação',
-    desc: 'Guias para costura. Cada ponto tem posição.',
+    desc: 'Cada ponto é riscado antes da linha começar o caminho.',
   },
   {
     num: '04',
     title: 'Costura',
-    desc: 'Linha reforçada. Ponto sela duplo.',
+    desc: 'A linha entra para segurar, não para aparecer.',
   },
   {
     num: '05',
-    title: 'Acabamento',
-    desc: 'Borda selada, chanfrada e polida.',
+    title: 'Acerto de borda',
+    desc: 'A quina é aparada e trabalhada até assentar.',
   },
   {
     num: '06',
-    title: 'Entrega',
-    desc: 'Embalagem sóbria. Pronto para uso imediato.',
+    title: 'Revisão',
+    desc: 'No fim, a peça volta para a mão antes de sair da bancada.',
   },
 ];
 
@@ -46,11 +46,11 @@ export function Process() {
           className="kn-process-header kn-reveal"
         >
           <p className="kn-label" style={{ marginBottom: '24px' }}>
-            Processo
+            É aqui que ela ganha forma
           </p>
           <h2 className="kn-adv-title">
-            Seis etapas.<br />
-            <em>Nenhuma a mais.</em>
+            Uma peça dessas pede tempo.<br />
+            <em>E mão firme.</em>
           </h2>
         </div>
 
